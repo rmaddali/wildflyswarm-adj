@@ -65,7 +65,7 @@ pipeline {
           ls target/*
           rm -rf oc-build && mkdir -p oc-build/deployments
           for t in \$(echo "jar;war;ear" | tr ";" "\\n"); do
-            cp -rfv ./target/wildflyswarm-adj-1.0.0-SNAPSHOT-fat.jar oc-build/deployments/ 2> /dev/null || echo "No \$t files"
+            cp -rfv ./target/wildflyswarm-adj-1.0.0-SNAPSHOT-swarm.jar oc-build/deployments/ 2> /dev/null || echo "No \$t files"
           done
         """
 
